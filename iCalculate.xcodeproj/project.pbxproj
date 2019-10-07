@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AABC9CD234B50D6007E9FE6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0AABC9CC234B50D6007E9FE6 /* LICENSE */; };
+		0AE265B52348D3C0000D9E12 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE265B42348D3C0000D9E12 /* UIButtonExtension.swift */; };
+		0AE265B7234984B5000D9E12 /* Op.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE265B6234984B5000D9E12 /* Op.swift */; };
+		0AE265B923498E6D000D9E12 /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE265B823498E6D000D9E12 /* Equation.swift */; };
+		0AE265BB234ADC3E000D9E12 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AE265BA234ADC3D000D9E12 /* README.txt */; };
+		0AE265BD234AE926000D9E12 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE265BC234AE926000D9E12 /* TableViewController.swift */; };
+		0AE265C1234B0F70000D9E12 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE265C0234B0F70000D9E12 /* AnimatedView.swift */; };
+		0AE265C9234B3918000D9E12 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE265C8234B3918000D9E12 /* AboutViewController.swift */; };
 		0AE5BAFE2348B629002ECCB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5BAFD2348B629002ECCB6 /* AppDelegate.swift */; };
 		0AE5BB002348B629002ECCB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5BAFF2348B629002ECCB6 /* SceneDelegate.swift */; };
 		0AE5BB022348B629002ECCB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5BB012348B629002ECCB6 /* ViewController.swift */; };
@@ -14,9 +22,20 @@
 		0AE5BB082348B629002ECCB6 /* iCalculate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5BB062348B629002ECCB6 /* iCalculate.xcdatamodeld */; };
 		0AE5BB0A2348B62D002ECCB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5BB092348B62D002ECCB6 /* Assets.xcassets */; };
 		0AE5BB0D2348B62D002ECCB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5BB0B2348B62D002ECCB6 /* LaunchScreen.storyboard */; };
+		0AE5BB152348B66F002ECCB6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5BB142348B66F002ECCB6 /* StringExtension.swift */; };
+		5EC92A6DC11B441437C9D60D /* Pods_iCalculate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D768267089FD81AB0D0454 /* Pods_iCalculate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AABC9CB234B504A007E9FE6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0AABC9CC234B50D6007E9FE6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0AE265B42348D3C0000D9E12 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		0AE265B6234984B5000D9E12 /* Op.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Op.swift; sourceTree = "<group>"; };
+		0AE265B823498E6D000D9E12 /* Equation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equation.swift; sourceTree = "<group>"; };
+		0AE265BA234ADC3D000D9E12 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		0AE265BC234AE926000D9E12 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0AE265C0234B0F70000D9E12 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
+		0AE265C8234B3918000D9E12 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		0AE5BAFA2348B629002ECCB6 /* iCalculate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCalculate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE5BAFD2348B629002ECCB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE5BAFF2348B629002ECCB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +45,10 @@
 		0AE5BB092348B62D002ECCB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AE5BB0C2348B62D002ECCB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AE5BB0E2348B62D002ECCB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE5BB142348B66F002ECCB6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1D9D5C87C7A414F6D72519D7 /* Pods-iCalculate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCalculate.release.xcconfig"; path = "Target Support Files/Pods-iCalculate/Pods-iCalculate.release.xcconfig"; sourceTree = "<group>"; };
+		75D768267089FD81AB0D0454 /* Pods_iCalculate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCalculate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22C9E5892DE899028243C9B /* Pods-iCalculate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCalculate.debug.xcconfig"; path = "Target Support Files/Pods-iCalculate/Pods-iCalculate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC92A6DC11B441437C9D60D /* Pods_iCalculate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +66,12 @@
 		0AE5BAF12348B629002ECCB6 = {
 			isa = PBXGroup;
 			children = (
+				0AABC9CB234B504A007E9FE6 /* README.md */,
+				0AE265BA234ADC3D000D9E12 /* README.txt */,
+				0AABC9CC234B50D6007E9FE6 /* LICENSE */,
 				0AE5BAFC2348B629002ECCB6 /* iCalculate */,
-				0AE5BAFB2348B629002ECCB6 /* Products */,
+				31EA6E60B4CA00789228F560 /* Pods */,
+				C69774408209D8A6735034D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +81,7 @@
 				0AE5BAFA2348B629002ECCB6 /* iCalculate.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0AE5BAFC2348B629002ECCB6 /* iCalculate */ = {
@@ -61,13 +90,46 @@
 				0AE5BAFD2348B629002ECCB6 /* AppDelegate.swift */,
 				0AE5BAFF2348B629002ECCB6 /* SceneDelegate.swift */,
 				0AE5BB012348B629002ECCB6 /* ViewController.swift */,
+				0AE265BC234AE926000D9E12 /* TableViewController.swift */,
+				0AE265C8234B3918000D9E12 /* AboutViewController.swift */,
+				0AE265C0234B0F70000D9E12 /* AnimatedView.swift */,
+				0AE265B823498E6D000D9E12 /* Equation.swift */,
+				0AE265B6234984B5000D9E12 /* Op.swift */,
 				0AE5BB032348B629002ECCB6 /* Main.storyboard */,
 				0AE5BB092348B62D002ECCB6 /* Assets.xcassets */,
 				0AE5BB0B2348B62D002ECCB6 /* LaunchScreen.storyboard */,
 				0AE5BB0E2348B62D002ECCB6 /* Info.plist */,
 				0AE5BB062348B629002ECCB6 /* iCalculate.xcdatamodeld */,
+				0AE5BB162348B6E1002ECCB6 /* Extensions */,
+				0AE5BAFB2348B629002ECCB6 /* Products */,
 			);
 			path = iCalculate;
+			sourceTree = "<group>";
+		};
+		0AE5BB162348B6E1002ECCB6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5BB142348B66F002ECCB6 /* StringExtension.swift */,
+				0AE265B42348D3C0000D9E12 /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31EA6E60B4CA00789228F560 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F22C9E5892DE899028243C9B /* Pods-iCalculate.debug.xcconfig */,
+				1D9D5C87C7A414F6D72519D7 /* Pods-iCalculate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C69774408209D8A6735034D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75D768267089FD81AB0D0454 /* Pods_iCalculate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AE5BB112348B62D002ECCB6 /* Build configuration list for PBXNativeTarget "iCalculate" */;
 			buildPhases = (
+				CD8991381C8E911301BC6F6C /* [CP] Check Pods Manifest.lock */,
 				0AE5BAF62348B629002ECCB6 /* Sources */,
 				0AE5BAF72348B629002ECCB6 /* Frameworks */,
 				0AE5BAF82348B629002ECCB6 /* Resources */,
+				C8B9FA0C30E80A902ECC9866 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +194,55 @@
 			files = (
 				0AE5BB0D2348B62D002ECCB6 /* LaunchScreen.storyboard in Resources */,
 				0AE5BB0A2348B62D002ECCB6 /* Assets.xcassets in Resources */,
+				0AE265BB234ADC3E000D9E12 /* README.txt in Resources */,
 				0AE5BB052348B629002ECCB6 /* Main.storyboard in Resources */,
+				0AABC9CD234B50D6007E9FE6 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C8B9FA0C30E80A902ECC9866 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCalculate/Pods-iCalculate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCalculate/Pods-iCalculate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iCalculate/Pods-iCalculate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD8991381C8E911301BC6F6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iCalculate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AE5BAF62348B629002ECCB6 /* Sources */ = {
@@ -143,8 +251,15 @@
 			files = (
 				0AE5BB022348B629002ECCB6 /* ViewController.swift in Sources */,
 				0AE5BAFE2348B629002ECCB6 /* AppDelegate.swift in Sources */,
+				0AE265C9234B3918000D9E12 /* AboutViewController.swift in Sources */,
+				0AE5BB152348B66F002ECCB6 /* StringExtension.swift in Sources */,
 				0AE5BB082348B629002ECCB6 /* iCalculate.xcdatamodeld in Sources */,
+				0AE265B7234984B5000D9E12 /* Op.swift in Sources */,
 				0AE5BB002348B629002ECCB6 /* SceneDelegate.swift in Sources */,
+				0AE265B52348D3C0000D9E12 /* UIButtonExtension.swift in Sources */,
+				0AE265C1234B0F70000D9E12 /* AnimatedView.swift in Sources */,
+				0AE265BD234AE926000D9E12 /* TableViewController.swift in Sources */,
+				0AE265B923498E6D000D9E12 /* Equation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +401,7 @@
 		};
 		0AE5BB122348B62D002ECCB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F22C9E5892DE899028243C9B /* Pods-iCalculate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,12 +414,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinkim.iCalculate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0AE5BB132348B62D002ECCB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D9D5C87C7A414F6D72519D7 /* Pods-iCalculate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,7 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinkim.iCalculate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
