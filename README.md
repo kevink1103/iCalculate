@@ -1,7 +1,7 @@
 #  iCalculate
 
 This is a calculator app developed for an individual assignment in EE4304 iOS Development and Networking course at City University of Hong Kong.  
-![Main Screenshot](image/screenshot/main.png)
+<img src="image/screenshot/main.png" alt="Main Screenshot" width="300px">  
 **Check out more screenshots at the bottom**
 
 ## Requirements
@@ -27,9 +27,9 @@ Copyright (c) 2019 Kevin Kim
 
 # Screenshots
 
-![Screenshot 1](image/screenshot/1.png)
-![Screenshot 2](image/screenshot/2.png)
-![Screenshot 3](image/screenshot/3.png)
-![Screenshot 4](image/screenshot/4.png)
-![Screenshot 5](image/screenshot/5.png)
-![Screenshot 6](image/screenshot/6.png)
+<img src="image/screenshot/1.png" alt="Screenshot 1" width="300px">
+<img src="image/screenshot/2.png" alt="Screenshot 2" width="300px">
+<img src="image/screenshot/3.png" alt="Screenshot 3" width="300px">
+<img src="image/screenshot/4.png" alt="Screenshot 4" width="300px">
+<img src="image/screenshot/5.png" alt="Screenshot 5" width="300px">
+<img src="image/screenshot/6.png" alt="Screenshot 6" width="300px">
