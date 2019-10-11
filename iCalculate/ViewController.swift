@@ -86,6 +86,14 @@ class ViewController: UIViewController {
     }
     
     // MARK: Button Actions
+    @IBAction func manualPressed(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "User Manual",
+                                      message: "Double-tap: CLEAR ALL equation\nLong-press: COPY equation",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func delPressed(_ sender: UIButton) {
         equation.removeLast()
         updateFields()

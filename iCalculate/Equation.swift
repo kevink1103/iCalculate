@@ -8,6 +8,8 @@
 
 import Foundation
 
+// The codes here are very dirty
+// I should cleanse them later on
 class Equation {
     var array: [String] = []
     
@@ -37,15 +39,30 @@ class Equation {
             else {
                 let lastOp = Op(rawValue: last[0])
                 let currentOp = Op(rawValue: element[0])
+                
+                // Match open and close
+                if currentOp == .close {
+                    let openCount = array.filter { $0 == String(Op.open.rawValue) }.count
+                    let closeCount = array.filter { $0 == String(Op.close.rawValue) }.count
+                    if openCount <= closeCount {
+                        return
+                    }
+                    if lastOp == .add || lastOp == .subtract || lastOp == .multiply || lastOp == .divide || lastOp == .power || lastOp == .root {
+                        return
+                    }
+                }
                 // No duplicate
                 if lastOp != .open && lastOp != .close && lastOp == currentOp {
                     return
                 }
                 // No digit or sciOp allowed after pi and percent
-                if (currentOp != .add && currentOp != .subtract && currentOp != .multiply && currentOp != .divide) && (lastOp == .pi || lastOp == .percent) {
+                if (currentOp != .add && currentOp != .subtract && currentOp != .multiply && currentOp != .divide && currentOp != .close) && (lastOp == .pi || lastOp == .percent) {
                     return
                 }
                 if lastOp == .subtract && currentOp == .add {
+                    return
+                }
+                if lastOp != .close && (currentOp == .percent || currentOp == .power) {
                     return
                 }
             }
