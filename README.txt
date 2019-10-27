@@ -1,6 +1,7 @@
 #  iCalculate
 
-This is a calculator app developed for an individual assignment in EE4304 iOS Development and Networking course at City University of Hong Kong.
+This is a calculator app developed for an individual assignment in EE4304 iOS Development and Networking course at City University of Hong Kong.  
+[Github](https://github.com/kevink1103/iCalculate)
 <img src="image/screenshot/main.png" alt="Main Screenshot" width="300px">
 **Check out more screenshots at the bottom**
 
@@ -27,7 +28,6 @@ This is a calculator app developed for an individual assignment in EE4304 iOS De
 ## Author
 
 Copyright (c) 2019 Kevin Kim
-[Github](https://github.com/kevink1103/iCalculate)
 
 # Screenshots
 
