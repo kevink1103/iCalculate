@@ -154,6 +154,11 @@ class Equation {
                             }
                         }
                     }
+                    else if op == .power {
+                        if postfix.last == nil {
+                            return []
+                        }
+                    }
                     
                     if op != .percent && op != .pi {
                         stack.append(element)
@@ -161,7 +166,7 @@ class Equation {
                 }
             }
         }
-        if stack.count == 1 {
+        if stack.count > 0 {
             for _ in 0..<stack.count {
                 if let pop = stack.popLast() {
                     if pop[0] != Op.root.rawValue {

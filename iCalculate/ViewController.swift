@@ -93,6 +93,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func postfixPressed(_ sender: UIBarButtonItem) {
+        let postfix = equation.postfixEquation().joined(separator: " ")
+        let alert = UIAlertController(title: "Postfix Equation",
+                                      message: "\(postfix)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func delPressed(_ sender: UIButton) {
         inputField.deleteBackward()
         updateFields()

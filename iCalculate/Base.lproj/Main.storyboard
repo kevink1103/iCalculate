@@ -746,12 +746,19 @@
                                 <action selector="manualPressed:" destination="BYZ-38-t0r" id="Bdw-RE-tw3"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="doc.text" catalog="system" style="done" id="ZhZ-a3-3nV">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="1xw-7v-Ec7" kind="show" id="oHi-R0-gYa"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="archivebox" catalog="system" style="done" id="ZhZ-a3-3nV">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="1xw-7v-Ec7" kind="show" id="oHi-R0-gYa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="postfix" image="doc.append" catalog="system" style="done" id="bfi-Vz-GJI">
+                                <connections>
+                                    <action selector="postfixPressed:" destination="BYZ-38-t0r" id="ifm-Wv-zCs"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="fieldView" destination="Pdi-kp-OFF" id="K6A-Lr-urB"/>
@@ -762,7 +769,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861.60000000000002" y="136.28185907046478"/>
+            <point key="canvasLocation" x="862" y="137"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="s9K-jl-nnN">
@@ -833,7 +840,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iCalculate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-5O-tNc">
-                                <rect key="frame" x="62.5" y="285" width="250" height="75"/>
+                                <rect key="frame" x="62.5" y="283" width="250" height="75"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="CyP-s2-UXY"/>
@@ -844,7 +851,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple but powerful by Kevin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImT-DL-ikT">
-                                <rect key="frame" x="88" y="356" width="199" height="24"/>
+                                <rect key="frame" x="88" y="354" width="199" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="154" id="9WH-oX-QNd"/>
                                     <constraint firstAttribute="height" constant="24" id="NS4-p3-dr3"/>
@@ -854,10 +861,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-Ef-Hf9">
-                                <rect key="frame" x="152.5" y="481" width="70" height="36"/>
+                                <rect key="frame" x="152.5" y="386" width="70" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="website">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="websiteLink:" destination="2VU-OF-X5n" eventType="touchUpInside" id="YOm-9a-xG3"/>
@@ -869,10 +876,10 @@
                             <constraint firstItem="ImT-DL-ikT" firstAttribute="centerX" secondItem="4TD-nL-6vU" secondAttribute="centerX" id="4Pk-YH-5w5"/>
                             <constraint firstItem="ZXh-Xm-MUP" firstAttribute="centerY" secondItem="4TD-nL-6vU" secondAttribute="centerY" id="7QX-cS-hyL"/>
                             <constraint firstItem="ZXh-Xm-MUP" firstAttribute="centerX" secondItem="4TD-nL-6vU" secondAttribute="centerX" id="7X0-l2-GTa"/>
-                            <constraint firstItem="Cdp-5O-tNc" firstAttribute="centerY" secondItem="4TD-nL-6vU" secondAttribute="centerY" constant="-11" id="TjO-QT-5ij"/>
+                            <constraint firstItem="Cdp-5O-tNc" firstAttribute="centerY" secondItem="4TD-nL-6vU" secondAttribute="centerY" constant="-13" id="TjO-QT-5ij"/>
+                            <constraint firstItem="QO1-Ef-Hf9" firstAttribute="centerX" secondItem="4TD-nL-6vU" secondAttribute="centerX" id="Uri-fM-wiq"/>
+                            <constraint firstItem="QO1-Ef-Hf9" firstAttribute="top" secondItem="ImT-DL-ikT" secondAttribute="bottom" constant="8" id="XhR-PF-GqG"/>
                             <constraint firstItem="ImT-DL-ikT" firstAttribute="top" secondItem="Cdp-5O-tNc" secondAttribute="bottom" constant="-4" id="ffH-aH-fAL"/>
-                            <constraint firstItem="QO1-Ef-Hf9" firstAttribute="centerX" secondItem="4TD-nL-6vU" secondAttribute="centerX" id="h6Z-e1-YKl"/>
-                            <constraint firstItem="QO1-Ef-Hf9" firstAttribute="top" secondItem="ZXh-Xm-MUP" secondAttribute="bottom" constant="7.5" id="hge-6k-JmN"/>
                             <constraint firstItem="Cdp-5O-tNc" firstAttribute="centerX" secondItem="4TD-nL-6vU" secondAttribute="centerX" id="ok5-53-5WO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HQv-s3-KNc"/>
@@ -915,9 +922,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="archivebox" catalog="system" width="64" height="52"/>
         <image name="arrowshape.turn.up.right" catalog="system" width="64" height="52"/>
         <image name="command" catalog="system" width="64" height="56"/>
-        <image name="doc.text" catalog="system" width="56" height="64"/>
+        <image name="doc.append" catalog="system" width="56" height="64"/>
         <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>
