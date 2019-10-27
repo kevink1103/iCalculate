@@ -26,7 +26,8 @@ This is a calculator app developed for an individual assignment in EE4304 iOS De
 
 ## Author
 
-Copyright (c) 2019 Kevin Kim
+Copyright (c) 2019 Kevin Kim  
+[Github](https://github.com/kevink1103/iCalculate)
 
 # Screenshots
 
