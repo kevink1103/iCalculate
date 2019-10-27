@@ -20,6 +20,7 @@ This is a calculator app developed for an individual assignment in EE4304 iOS De
 - [x] History (added when `=` is pressed)
 - [x] More operators `^`(power) `π`(pi) 
 - [x] Layout for all devices
+- [x] Horizontal orientation support
 
 ## Author
 

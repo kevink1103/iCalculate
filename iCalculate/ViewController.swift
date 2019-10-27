@@ -9,18 +9,22 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     let equation = Equation()
     
     @IBOutlet var fieldView: UIView!
     @IBOutlet var padView: UIView!
-    @IBOutlet var inputField: UILabel!
+    @IBOutlet var inputField: UITextField!
     @IBOutlet var realtimeField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        
+        // No Keyboard Popup
+        inputField.inputView = UIView()
         
         // No Navigation Bar Shadow
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -38,23 +42,18 @@ class ViewController: UIViewController {
 
     // MARK: Helper
     func updateFields() -> Void {
-        inputField.text = equation.display()
+        equation.updateString(inputField.text!)
         realtimeField.text = equation.calculate()
     }
     
     // MARK: Core Data
     func saveRecord(_ data: String) -> Bool {
-        guard let del = UIApplication.shared.delegate as? AppDelegate else {
-            return false
-        }
-        let context = del.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Record", in: context)!
-        let record = NSManagedObject(entity: entity, insertInto: context)
-        record.setValue(data, forKey: "equation")
-        record.setValue(Date(), forKey: "timestamp")
+        let record = Record(context: CoreDataManager.context)
+        record.equation = data
+        record.timestamp = Date()
         
         do {
-            try context.save()
+            try CoreDataManager.context.save()
         } catch let error as NSError {
             print("\(error)")
             return false
@@ -80,7 +79,7 @@ class ViewController: UIViewController {
     }
     
     @objc func clear(sender: UITapGestureRecognizer) {
-        equation.clear()
+        inputField.text = ""
         updateFields()
         realtimeField.text = "iCalculate"
     }
@@ -95,7 +94,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func delPressed(_ sender: UIButton) {
-        equation.removeLast()
+        inputField.deleteBackward()
         updateFields()
     }
     
@@ -103,8 +102,7 @@ class ViewController: UIViewController {
         let result: String = equation.calculate()
         if result.count > 0 {
             if saveRecord(equation.export()) {
-                equation.clear()
-                equation.add(result)
+                inputField.text = result
                 updateFields()
             }
         }
@@ -112,8 +110,15 @@ class ViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         let content: String = sender.titleLabel!.text!
-        equation.add(content)
+        inputField.insertText(content)
         updateFields()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        inputField.resignFirstResponder()
+    }
 }

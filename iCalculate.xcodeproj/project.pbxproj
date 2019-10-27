@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A76BF2A2365CDA4003692B0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A76BF292365CDA4003692B0 /* CoreDataManager.swift */; };
 		0AABC9CD234B50D6007E9FE6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0AABC9CC234B50D6007E9FE6 /* LICENSE */; };
 		0AE265B52348D3C0000D9E12 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE265B42348D3C0000D9E12 /* UIButtonExtension.swift */; };
 		0AE265B7234984B5000D9E12 /* Op.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE265B6234984B5000D9E12 /* Op.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A76BF292365CDA4003692B0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0AABC9CB234B504A007E9FE6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0AABC9CC234B50D6007E9FE6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0AE265B42348D3C0000D9E12 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -89,14 +91,15 @@
 			children = (
 				0AE5BAFD2348B629002ECCB6 /* AppDelegate.swift */,
 				0AE5BAFF2348B629002ECCB6 /* SceneDelegate.swift */,
+				0A76BF292365CDA4003692B0 /* CoreDataManager.swift */,
 				0AE5BB012348B629002ECCB6 /* ViewController.swift */,
 				0AE265BC234AE926000D9E12 /* TableViewController.swift */,
 				0AE265C8234B3918000D9E12 /* AboutViewController.swift */,
 				0AE265C0234B0F70000D9E12 /* AnimatedView.swift */,
 				0AE265B823498E6D000D9E12 /* Equation.swift */,
 				0AE265B6234984B5000D9E12 /* Op.swift */,
-				0AE5BB032348B629002ECCB6 /* Main.storyboard */,
 				0AE5BB092348B62D002ECCB6 /* Assets.xcassets */,
+				0AE5BB032348B629002ECCB6 /* Main.storyboard */,
 				0AE5BB0B2348B62D002ECCB6 /* LaunchScreen.storyboard */,
 				0AE5BB0E2348B62D002ECCB6 /* Info.plist */,
 				0AE5BB062348B629002ECCB6 /* iCalculate.xcdatamodeld */,
@@ -255,6 +258,7 @@
 				0AE5BB152348B66F002ECCB6 /* StringExtension.swift in Sources */,
 				0AE5BB082348B629002ECCB6 /* iCalculate.xcdatamodeld in Sources */,
 				0AE265B7234984B5000D9E12 /* Op.swift in Sources */,
+				0A76BF2A2365CDA4003692B0 /* CoreDataManager.swift in Sources */,
 				0AE5BB002348B629002ECCB6 /* SceneDelegate.swift in Sources */,
 				0AE265B52348D3C0000D9E12 /* UIButtonExtension.swift in Sources */,
 				0AE265C1234B0F70000D9E12 /* AnimatedView.swift in Sources */,

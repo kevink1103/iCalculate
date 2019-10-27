@@ -25,7 +25,7 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
     
     @IBAction func sendEmail(_ sender: UIBarButtonItem) {
         if !MFMailComposeViewController.canSendMail() {
-            let alert = UIAlertController(title: "Mail Unabled", message: "Please register Mail.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Mail Unabled", message: "Please register Mail in Settings.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             print("Mail services are not available")

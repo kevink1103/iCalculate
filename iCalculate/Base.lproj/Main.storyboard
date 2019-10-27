@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePp-h0-EhS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePp-h0-EhS">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,29 +18,38 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-kp-OFF">
                                 <rect key="frame" x="0.0" y="44" width="375" height="178"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Fum-wW-Sc1">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-Ak-faa">
                                         <rect key="frame" x="8" y="0.0" width="359" height="89"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="80"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="80"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="I1p-rh-HTG"/>
+                                        </connections>
+                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iCalculate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="1Bc-gP-W8I">
                                         <rect key="frame" x="8" y="89" width="359" height="89"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="80"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Fum-wW-Sc1" firstAttribute="top" secondItem="Pdi-kp-OFF" secondAttribute="top" id="22S-Lq-E62"/>
-                                    <constraint firstItem="1Bc-gP-W8I" firstAttribute="leading" secondItem="Pdi-kp-OFF" secondAttribute="leading" constant="8" id="3Ot-mT-7kD"/>
-                                    <constraint firstItem="1Bc-gP-W8I" firstAttribute="top" secondItem="Fum-wW-Sc1" secondAttribute="bottom" id="BcV-Tr-HT8"/>
-                                    <constraint firstItem="Fum-wW-Sc1" firstAttribute="height" secondItem="Pdi-kp-OFF" secondAttribute="height" multiplier="1:2" id="TOB-F2-xLh"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fum-wW-Sc1" secondAttribute="trailing" constant="8" id="aTc-Bz-OTR"/>
-                                    <constraint firstItem="Fum-wW-Sc1" firstAttribute="leading" secondItem="Pdi-kp-OFF" secondAttribute="leading" constant="8" id="hAl-Fe-QrM"/>
-                                    <constraint firstAttribute="bottom" secondItem="1Bc-gP-W8I" secondAttribute="bottom" id="muB-x2-5fK"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Bc-gP-W8I" secondAttribute="trailing" constant="8" id="x02-9s-9Gu"/>
+                                    <constraint firstItem="1Bc-gP-W8I" firstAttribute="height" secondItem="Pdi-kp-OFF" secondAttribute="height" multiplier="1:2" id="2NO-3K-MUZ"/>
+                                    <constraint firstItem="1Bc-gP-W8I" firstAttribute="leading" secondItem="Pdi-kp-OFF" secondAttribute="leading" constant="8" id="AuM-sQ-J3G"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Bc-gP-W8I" secondAttribute="trailing" constant="8" id="BYe-VQ-5O0"/>
+                                    <constraint firstItem="MLi-Ak-faa" firstAttribute="leading" secondItem="Pdi-kp-OFF" secondAttribute="leading" constant="8" id="VHs-bG-8OU"/>
+                                    <constraint firstAttribute="trailing" secondItem="MLi-Ak-faa" secondAttribute="trailing" constant="8" id="fvF-sK-blT"/>
+                                    <constraint firstItem="MLi-Ak-faa" firstAttribute="top" secondItem="Pdi-kp-OFF" secondAttribute="top" id="jEh-75-zVc"/>
+                                    <constraint firstItem="MLi-Ak-faa" firstAttribute="height" secondItem="Pdi-kp-OFF" secondAttribute="height" multiplier="1:2" id="wJL-7w-1t2"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Bc-gP-W8I" secondAttribute="bottom" id="yMn-2c-Hab"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBl-K7-0fG">
@@ -54,7 +63,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D0-Xm-p9d">
                                                         <rect key="frame" x="0.0" y="0.0" width="94" height="74"/>
-                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                         <state key="normal" title="(">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,13 +76,16 @@
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8X5-It-UJl"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc3-Wl-rcd">
                                                         <rect key="frame" x="94" y="0.0" width="93.5" height="74"/>
-                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                         <state key="normal" title=")">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,13 +101,16 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="de9-kg-sb7"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPg-71-mhl">
                                                         <rect key="frame" x="187.5" y="0.0" width="94" height="74"/>
-                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                         <state key="normal" title="π">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,6 +126,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DIx-VP-QsW"/>
                                                         </connections>
@@ -133,6 +151,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="delPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLz-L7-nDk"/>
                                                         </connections>
@@ -165,6 +186,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="trq-z5-chH"/>
                                                         </connections>
@@ -187,6 +211,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NeD-dQ-m1a"/>
                                                         </connections>
@@ -209,6 +236,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oaV-vs-Bdw"/>
                                                         </connections>
@@ -231,6 +261,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bx6-Gn-9vg"/>
                                                         </connections>
@@ -263,6 +296,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lay-9j-FD4"/>
                                                         </connections>
@@ -285,6 +321,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nd-mY-FUH"/>
                                                         </connections>
@@ -307,6 +346,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iE8-hZ-I3a"/>
                                                         </connections>
@@ -329,6 +371,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXs-U9-9iW"/>
                                                         </connections>
@@ -361,6 +406,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CkM-Pb-moj"/>
                                                         </connections>
@@ -383,6 +431,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uj3-jg-P3x"/>
                                                         </connections>
@@ -405,6 +456,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJ0-SO-mC4"/>
                                                         </connections>
@@ -427,6 +481,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JBu-TM-IfA"/>
                                                         </connections>
@@ -459,6 +516,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sry-nQ-H6p"/>
                                                         </connections>
@@ -481,6 +541,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NCm-96-QU4"/>
                                                         </connections>
@@ -503,6 +566,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBq-2b-llu"/>
                                                         </connections>
@@ -525,6 +591,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OdZ-2e-mI1"/>
                                                         </connections>
@@ -557,6 +626,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8pi-TM-tgi"/>
                                                         </connections>
@@ -579,6 +651,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WxM-OV-8QB"/>
                                                         </connections>
@@ -601,6 +676,9 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="equalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQe-Oo-Uha"/>
                                                         </connections>
@@ -677,7 +755,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="fieldView" destination="Pdi-kp-OFF" id="K6A-Lr-urB"/>
-                        <outlet property="inputField" destination="Fum-wW-Sc1" id="2TJ-1c-WZP"/>
+                        <outlet property="inputField" destination="MLi-Ak-faa" id="Pkv-iQ-wSM"/>
                         <outlet property="padView" destination="BBl-K7-0fG" id="Oe7-jQ-cyC"/>
                         <outlet property="realtimeField" destination="1Bc-gP-W8I" id="yvK-Kl-28T"/>
                     </connections>
@@ -746,7 +824,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXh-Xm-MUP" customClass="AnimatedView" customModule="iCalculate" customModuleProvider="target">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXh-Xm-MUP" customClass="AnimatedView" customModule="iCalculate" customModuleProvider="target">
                                 <rect key="frame" x="47.5" y="193.5" width="280" height="280"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -838,8 +916,8 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.right" catalog="system" width="64" height="52"/>
-        <image name="command" catalog="system" width="64" height="58"/>
+        <image name="command" catalog="system" width="64" height="56"/>
         <image name="doc.text" catalog="system" width="56" height="64"/>
-        <image name="info.circle" catalog="system" width="64" height="62"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

@@ -11,7 +11,7 @@ import CoreData
 
 class TableViewController: UITableViewController {
     
-    var records: [String] = []
+    var records: [Record] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,22 +26,14 @@ class TableViewController: UITableViewController {
     }
     
     // MARK: Core Data
-    func loadRecords() -> [String] {
-        var records: [String] = []
+    func loadRecords() -> [Record] {
+        var records: [Record] = []
 
-        guard let del = UIApplication.shared.delegate as? AppDelegate else {
-            return records
-        }
-        let context = del.persistentContainer.viewContext
-        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Record")
+        let fetchReq: NSFetchRequest<Record> = Record.fetchRequest()
         fetchReq.sortDescriptors = [NSSortDescriptor.init(key: "timestamp", ascending: false)]
         
         do {
-            let results = try context.fetch(fetchReq)
-            for data in results as! [NSManagedObject] {
-                let record = data.value(forKey: "equation") as! String
-                records.append(record)
-            }
+            records = try CoreDataManager.context.fetch(fetchReq)
         } catch let error as NSError {
             print("\(error)")
             return records
@@ -49,34 +41,15 @@ class TableViewController: UITableViewController {
         return records
     }
     
-    func deleteRecord(_ target: String) -> Bool {
-        guard let del = UIApplication.shared.delegate as? AppDelegate else {
-            return false
-        }
-        let context = del.persistentContainer.viewContext
-        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Record")
-        
+    func deleteRecord(_ record: Record) -> Bool {
+        CoreDataManager.context.delete(record)
         do {
-            let results = try context.fetch(fetchReq)
-            for data in results as! [NSManagedObject] {
-                let record = data.value(forKey: "equation") as! String
-
-                if record == target {
-                    context.delete(data)
-                    do {
-                        try context.save()
-                    } catch let error as NSError {
-                        print("\(error)")
-                        return false
-                    }
-                    return true
-                }
-            }
+            try CoreDataManager.context.save()
         } catch let error as NSError {
             print("\(error)")
             return false
         }
-        return false
+        return true
     }
 
     // MARK: - Table view data source
@@ -96,10 +69,10 @@ class TableViewController: UITableViewController {
 
         // Configure the cell...
         let index = indexPath.row
-        let record = records[index]
-        let equalIndex = record.search("=")
-        let eq = record[0..<(equalIndex-1)]
-        let result = record[(equalIndex+1)...]
+        let equation = records[index].equation!
+        let equalIndex = equation.search("=")
+        let eq = equation[0..<(equalIndex-1)]
+        let result = equation[(equalIndex+1)...]
         cell.textLabel?.text = String(eq)
         cell.detailTextLabel?.text = String(result)
 
@@ -107,7 +80,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UIPasteboard.general.string = records[indexPath.row]
+        UIPasteboard.general.string = records[indexPath.row].equation!
         let alert = UIAlertController(title: "Copy Successful", message: "Copied to clipboard.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
